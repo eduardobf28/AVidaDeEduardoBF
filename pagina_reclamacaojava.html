@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pagina_reclamacao.css" href="reclamascript.js">
+    <script language="JavaScript" >
+		function enviardados(){
+			if(document.dados.nome.value=="" || document.dados.nome.value.length < 8){
+				alert( "Preencha campo NOME corretamente!" );
+				document.dados.nome.focus();
+				return false;
+			}
+			if( document.dados.email.value=="" || document.dados.email.value.indexOf('@')==-1 ||
+				document.dados.email.value.indexOf('.')==-1 ){
+				alert( "Preencha campo E-MAIL corretamente!" );
+				document.dados.email.focus();
+				return false;
+			}
+			var tprod = document.getElementById("country_o");
+     		tprod = document.getElementById("TipoProduto").value;
+			if ((tprod == "")||(tprod == "t2")) {
+      			alert("Tipo inválido");
+       			return false;
+     		}
+			 var prod = document.getElementById("Produto");
+			prod = document.getElementById("Produto").value;
+    		if ((prod == "")||(prod == null)) {
+      			alert("Produto inválido");
+       			return false;
+     		}
+    		/*if ((tprod.t1 == prod.p2) || (tprod.t2 == prod.p1)){
+				alert("Tipo e Produto não correspondentes!");
+				return false; 
+   			}*/		//Perguntar ao Professor motivo do erro
+			if (document.dados.comentario.value==""){
+				alert( "Preencha o campo MENSAGEM!" );
+				document.dados.mensagem.focus();
+				return false;
+			}
+			if (document.dados.comentario.value.length < 10 ){
+				alert( "Necessário pelo menos 10 caractéres!" );
+				document.dados.comentario.focus();
+				return false;
+			}
+			var trocar = document.getElementById("trocar");
+    		var estornar = document.getElementById("estornar");
+			var reparar = document.getElementById("reparar");
+			if (prod.value.p1==trocar || prod.value.p2 == reparar){
+				alert("Solicitação incompatível, escolha novamente oque deseja fazer com o pedido");
+				return false;
+   			}
+		return true;
+		}
+
+	</script>
+</head>
+<body>
+    <Header>
+        <h1>Atendimendo Ao Cliente</h1>
+    </Header>
+    <nav>
+            <ul>
+                <li><a href="Pagina de Abertura.html">Home</a></li>
+                <li><a href="Pagina de Abertura.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+    </nav>
+    <main>
+        <div class="box">
+		<form action= "formulario" method="post" name="dados" onSubmit="return enviardados();">
+         <fieldset>
+            <legend><b>Formulário de Reclamação</b></legend>
+            <br><br>
+            <div class="inputBox"> <!-- Bloco com funções de input de texto e em seleções de alternativas -->
+                <input type="nome" name="nome" id="nome" class="input" required>
+                <label for="nome" class="labelinput">Digite Seu Nome: </label>
+               </div>
+               <br><br>
+               <div class="inputBox">
+                <input type="email" name="email" id="email" class="input" required>
+                <label for="email" class="labelinput">Seu email: </label>
+               </div>
+			   <br><br>
+			   <div class="select">
+					<label  for="select">Tipo do Produto:</label>
+					<select id="TipoProduto" name="TipoProduto">
+					<option value=""></option>
+					<option value="t1">Eletrônico</option>
+					<option value="t2">Domicílio</option>
+				  </select>
+				  <br>
+				  <br>
+				<div class="select">
+                    <label  for="inputBox">Produto:</label>
+                    <select id="Produto" name="Produto">
+						<option value=""></option>
+                        <option value="p1">Cafeteira Eletrolux</option>
+                        <option value="p2">Kit de Cama</option>
+                      </select>
+				</div>
+				<br>
+				<br>
+				<p>O que deseja fazer com o pedido?</p>
+				<input type="radio" id="estornar" name="pedido" value="estornar" required>
+				<label for="estornar">Estornar</label>
+				<br>
+				<input type="radio" id="trocar" name="pedido" value="trocar" required>
+				<label for="trocar">Trocar</label>
+				<br>
+				<input type="radio" id="reparar" name="pedido" value="reparar" required>
+				<label for="reparar">Reparar</label>
+				<br><br><br>
+               <div class="inputBox">
+                <textarea rows="7" id="comentario" name="msg" class="input" required></textarea>
+                <label for="msg" class="labelinput"> Motivo da Reclamação: </label> 
+               </div>
+			   <br>
+               <input type="submit" name="submit" id="submit">
+         </fieldset> 
+		</form>		 
+        </div>
+	</div>
+	<div id="end">
+	<li><a href="#">Termos de Serviço | Política de Privacidade | Política de Cookies</a></li>
+	<li><a href="#contato.html">Contato</a></li> 
+	</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<style>
+nav ul{
+  list-style-type: none;
+  background-color: rgb(2, 114, 82);   
+  padding: 0;
+  margin: 0;
+  border-radius: 3px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    align-items: center;
+	position: relative;
+}
+nav a:after{
+	background: none repeat scroll 0 0  transparent;
+	bottom: 0;
+	content: " ";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: white;
+	width:0%;
+}
+nav a:hover:after{
+	width: 100%;
+	left: 0;
+}
+
+
+nav li{
+    display: inline-block;
+    padding: 10px;
+}
+input[type=input], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+</style>
+<body>
+    <nav>
+        <ul>
+            <li><a href="pagina_abertura.html">Voltar</a></li>
+        </ul>
+</nav>
+<div>
+    <form>
+    <label for="nome">Nome Completo:</label>
+    <label for="nome"><input type="input" id="nome" name =" " placeholder=" "required>
+    
+    <label for="Telefone">Telefone</label>
+    <input type="tel"name="usertel" placeholder="(xx)12345-6789"   pattern="[0-9]{2}[0-9]{5}-[0-9]{4}" 21 986491191 required>
+
+    <label for="Estado">Estado</label>
+    <select id="Estado" name="Estado">
+      <option value="RJ">Rio de Janeiro</option>
+      <option value="SP">São Paulo</option>
+      <option value="AC">Acre</option>
+      <option value="MT">Mato Grosso do Sul</option>
+      <option value="MS">Minas Gerais</option>
+      <option value="OT">Outros</option>
+    </select>
+
+    <label for="email">Email:</label>
+    <input type="email" name="e-mail" placeholder=" " required>
+
+    <label for="senha">Senha</label>
+    <input type="password" name="Senha" placeholder=" " required>
+  
+    <input type="submit" value="Cadastrar">
+    </form>
+</div>
+Já tem conta?
+<a href="entrar.html">Ir para Login </a>
+</body>
+</html> 

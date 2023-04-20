@@ -1,0 +1,223 @@
+body{
+    font-family: Arial,Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(2, 44, 34), rgb(11,67,49));
+}
+header{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(3, 125, 88);
+}
+header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+nav ul{
+    list-style-type: none;
+    background-color: rgb(2, 114, 82);   
+    padding: 0;
+    margin: 0;
+	border-radius: 3px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    align-items: center;
+	position: relative;
+}
+nav a:after{
+	background: none repeat scroll 0 0  transparent;
+	bottom: 0;
+	content: " ";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background: white;
+	width:0%;
+}
+nav a:hover:after{ /* Navs para efeito de linha abaixo dos elementos com o passar do mouse*/
+	width: 100%;
+	left: 0;
+}
+
+
+nav li{
+    display: inline-block;
+    padding: 10px;
+}
+.box{
+    color: white;
+    position: absolute;
+    top: 55%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 15px;
+    width: 20%;
+}
+legend{
+    border: 1px solid white;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(11,67,49);
+    border-radius: 8px;
+}
+fieldset{
+    border: 3px solid white;
+    border-radius: 15px;
+}
+
+.tipo{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	appearance:none;
+	outline:0;
+	box-shadow:none;
+	border:0!important;
+	background: rgb(3, 125, 88);
+	background-image: none;
+	flex:1;
+	color: white;
+	cursor: pointer;
+	font-size:15px;
+}
+.tipo::-ms-expand {
+	display:none;
+}
+.tipo {
+	position:relative;
+	display: flex;
+	width:13em;
+	height: 3em;
+	line-height: 3;
+	background: rgb(3, 125, 88);
+	overflow: hidden;
+	border-radius:3px;
+}
+.tipo::after{
+	content: '\25BC';
+	position: relative;
+	top: 0%;
+	right: 0%;
+	padding:0  1em ;
+	background: black;
+	cursor: pointer;
+	pointer-events:none;
+	transition: 25s all ease;
+}
+select{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	appearance:none;
+	outline:0;
+	box-shadow:none;
+	border:0!important;
+	background: rgb(3, 125, 88);
+	background-image: none;
+	flex:1;
+	padding:0 5em;
+	color: white;
+	cursor: pointer;
+	font-size:15px;
+	margin-left: -60px;
+	
+}
+select::-ms-expand {
+	display:none;
+}
+.select {
+	position:relative;
+	display: flex;
+	width:13em;
+	height: 3em;
+	line-height: 3;
+	
+	overflow: hidden;
+	border-radius:3px;
+}
+.select::after{
+	content: '\25BC';
+	position: relative;
+	top: 0%;
+	right: 26%;
+	padding:0  1em ;
+	background: black;
+	cursor: pointer;
+	pointer-events:none;
+	transition: 25s all ease;
+}
+.inputBox{
+    position: relative;
+}
+.input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 1px;
+}
+.labelinput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5px;
+    margin: 1px;
+}
+.input:focus ~ .labelinput, /* Efeito para o nome da caixa do input se manter sem ser selecionado */
+.input:valid ~ .labelinput{ /* Efeito para o nome da caixa do input diminuir e subir ao ser selecionado com o mouse */
+    top:-20px;
+    font-size:12px;
+    color: white;
+}
+#submit{
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size:15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+#end{
+	color: white;
+    position: absolute;
+    top: 95%;
+    left: 36%;
+    transform: translate(-40%,-5%);
+    background-color:  rgb(2, 114, 82); 
+    text-align:center; 
+    width: 106%;
+    margin: auto;
+    display: block;
+    padding: 5px;   
+	border: 1px solid white;
+	list-style-type: none;
+}
+div a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px;
+    display: inline-block;
+    margin-right: 15px;
+    align-items: center;
+	position: relative;
+	flex-direction: column;
+	margin-left: 160px;
+}
+

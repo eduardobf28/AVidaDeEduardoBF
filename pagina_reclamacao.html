@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Reclamação</title>
+    <link rel="stylesheet" href="pagina_reclamacao.css">
+	<script type="text/javascript" src="jscript.js"></script>
+</head>
+<body>
+    
+    <nav>
+            <ul>
+                <li><a href="pagina_abertura.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+    </nav>
+    <main>
+        <div class="box">
+		<form action= "formulario" method="post" name="dados" onSubmit="return enviardados();">
+         <fieldset>
+            <legend><b>Formulário de Reclamação</b></legend>
+            <br><br>
+            <div class="inputBox">
+                <input type="nome" name="nome" id="nome" class="input" required>
+                <label for="nome" class="labelinput">Digite Seu Nome: </label>
+               </div>
+               <br><br>
+               <div class="inputBox">
+                <input type="email" name="email" id="email" class="input" required>
+                <label for="email" class="labelinput">Seu email: </label>
+               </div>
+			   <br><br>
+			    <label  for="inputBox">Tipo do Produto:</label>
+				<br>
+			   	<div class="tipo">
+					<select id="inputBox" name="TipoProduto">
+						<option value=""></option>
+						<option value="t1">Veículo</option>
+						<option value="t2">Brinquedo Infantil</option>
+                        <option value="t3">Trajes esportivos</option>
+                        <option value="t4">Livros</option>
+                        <option value="t5">Consoles</option>
+				  </select>
+				</div>
+				  <br>
+				  <br>
+				<div>
+			   <label  for="inputBox">Produto:</label>
+			   <br>
+			   <div class="select">
+                    <select id="inputBox" name="Produto">
+						<option value=""></option>
+                        <option value="p1">Pálio</option>
+                        <option value="p2">Barbieㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</option>
+                        <option value="p3">Play Station 9</option>
+                        <option value="p4">Blusa do flaminense</option>
+                        <option value="p5">Livro</option>
+                    </select>
+				</div>
+				<br>
+				<br>
+				<p>O que deseja fazer com o pedido?</p>
+				<input type="radio" id="estornar" name="pedido" value="estornar" required>
+				<label for="estornar">Estornar</label>
+				<br>
+				<input type="radio" id="trocar" name="pedido" value="trocar" required>
+				<label for="trocar">Trocar</label>
+				<br>
+				<input type="radio" id="reparar" name="pedido" value="reparar" required>
+				<label for="reparar">Reparar</label>
+				<br><br><br>
+               <div class="inputBox">
+                <textarea rows="7" id="comentario" name="msg" class="input" required></textarea>
+                <label for="msg" class="labelinput">Motivo da Reclamação: </label> 
+               </div>
+			   <br>
+               <input type="submit" name="submit" id="submit">
+         </fieldset> 
+		</form>		 
+        </div>
+<div id="end">
+<li><a href="#">Termos de Serviço | Política de Privacidade | Política de Cookies</a></li>
+<li><a href="contato.html">Contato</a></li> 
+</div>
+</body>
+</html>
